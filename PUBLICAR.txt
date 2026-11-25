@@ -1,0 +1,11 @@
+BEL.ia — atualização de tracking
+
+Substituir somente index.html na raiz do repositório. vercel.json não mudou.
+
+Incluídos: getCookieValue e getFbc; fbp, fbc, user_agent e event_id no payload; fbp/fbc/event_id também em custom_fields; UTMs ampliadas. form_submit_success mantém o nome e usa o mesmo event_id do payload, somente após sucesso. Proteções contra clique duplo e reenvio mantidas.
+
+HTML, CSS, quiz, máscara, webhook, embed e GTM preservados. Nenhum pixel hardcoded encontrado no HTML publicado usado como base nem no arquivo final.
+
+Validação local com resposta do webhook simulada: cinco cenários (cookie, fallback fbclid, ausência de cookies/parâmetros, erro HTTP, rejeição lógica). Um evento após sucesso; nenhum após erro; mesmo ID no payload e evento.
+
+PENDENTE APÓS PUBLICAÇÃO: abrir https://lp.bel-ia.com/?utm_source=meta&fbclid=teste123, preencher e enviar; conferir Network e console. Não foi feito envio real nem alteração em produção nesta entrega.
